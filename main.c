@@ -4,7 +4,7 @@
 int multiples_15() {
   int x = 2, result = 0;
   while (x < 1000) {
-    if (x % 15 == 0 || x % 5 == 0 || x % 3 == 0) {
+    if (x % 5 == 0 || x % 3 == 0) {
       result += x;
     }
     x++;
@@ -19,7 +19,7 @@ int smallest_multiple() {
   while (current_num < 21) {
     if (num % current_num == 0) {
       fix = num;
-      current_num += 1;
+      current_num++;
     } else {
       num += fix;
     }
