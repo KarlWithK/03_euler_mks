@@ -1,13 +1,13 @@
 .POSIX:
 CC= gcc
 OBJECTS= main.o
-CFLAGS= -lm
+LDLIBS= -lm
 
 run: main
 	./main
 
 main: $(OBJECTS)
-	$(CC) -o main $(OBJECTS) $(CFLAGS)
+	$(CC) -o main $(OBJECTS) $(LDLIBS)
 
 main.o: main.c
 	$(CC) -c main.c
